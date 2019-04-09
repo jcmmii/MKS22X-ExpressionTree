@@ -27,13 +27,19 @@ public class ExpressionTree{
   /*return the value of the specified expression tree*/
   public double evaluate(){
     /*you are to write this method*/
-    return 0.0;
+    if (isValue()) return getValue();
+    return apply(getOp(), getLeft().evaluate(), getRight().evaluate());
     }
 
   /*use the correct operator on both a and b, and return that value*/
   private double apply(char op, double a, double b){
     /*you are to write this method*/
-    return 0.0;
+    if (op == '+') return a+b;
+    if (op == '-') return a-b;
+    if (op == '*') return a*b;
+    if (op == '/') return a/b;
+    //% operator is not included in expression tree!
+    return 0.0; //should never return 0.0 
     }
 
 //DON'T EDIT BELOW ME//
