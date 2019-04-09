@@ -39,7 +39,7 @@ public class ExpressionTree{
     if (op == '*') return a*b;
     if (op == '/') return a/b;
     //% operator is not included in expression tree!
-    return 0.0; //should never return 0.0 
+    return 0.0; //when the operator is not one of the four listed above returns 0.0
     }
 
 //DON'T EDIT BELOW ME//
